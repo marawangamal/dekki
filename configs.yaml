@@ -1,0 +1,21 @@
+train:
+  epochs: 100
+  lr: 0.001
+  batch_size: 32
+  optimizer: sgd # adam, sgd
+  scheduler: # ReduceLROnPlateau
+    name: none
+    num_warmup_steps: 10
+loss:
+  name: ce # ce, focal
+  params:
+    gamma: 0
+    reduction: mean
+model:
+  name: lstm # lstm, linear
+  params:
+    hidden_size: 256
+    dropout: 0.1
+data:
+  input: data/processed/anki # Path to the data
+  output: runs/anki # Path to the output

@@ -1,0 +1,6 @@
+data/
+runs/
+*.zip
+*.apkg
+.DS_Store
+.idea
